@@ -3,8 +3,8 @@ class Question:
         self.cau_hoi = cau_hoi
         self.answer = answer
 cauhoi1 = [
-    "trai tao co mau gi \n a/mau do\nb/mau xanh\n",
-    "trai nho co mau gi\na/mau do\nb/mau tim\n",
+    "what color of ringo? \n a/red\nb/blue\n",
+    "what color of blueberry?\na/red\nb/blue\n",
 ]
 cauhoine = [
     Question(cauhoi1[0],"a"),
