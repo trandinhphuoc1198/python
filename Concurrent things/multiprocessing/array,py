@@ -1,0 +1,13 @@
+import multiprocessing
+array=[]
+def cube(num,array):
+    for x,y in enumerate(num):
+        array[x]=y
+        
+if __name__=='__main__':
+    array=multiprocessing.Array('i',4)
+    p1=multiprocessing.Process(target=cube,args=([1,2,3,4],array))
+    p1.start()
+    p1.join()
+    for i in range(4):
+        print(array[i])
