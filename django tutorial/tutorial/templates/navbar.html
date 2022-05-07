@@ -1,0 +1,27 @@
+
+<style>
+    .top-container{
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    }
+</style>
+<div class="top-container">
+    <h2><a href="{%url 'room' %}">GINTA</a></h2>
+    <div>
+        <div>
+            {% if request.user.is_authenticated%}
+            <h2>Hello {{request.user.username}}</h2>
+            <a href="{%url 'log_out'%}">Logout</a>
+            {%else%}
+            <h2><a href="{% url 'log_in'%}">Login</a></h2>
+            {%endif%}
+        </div>
+        
+    </div>
+</div>
+<form>
+
+    <input type="text" name="w" placeholder="Search...">
+</form>
+
+<hr>

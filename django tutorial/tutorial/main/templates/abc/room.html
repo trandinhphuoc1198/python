@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% block content%}
+<style>
+    .room-container{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+    }
+</style>
+
+<div class="room-container">
+    <div>
+        <h2>TOPIC</h2>
+        <h3><a href="{%url 'room'%}">All</a></h3>
+        {%for top1c in topic%}
+        <a href="{%url 'room'%}?w={{top1c.title}}"><h3>{{top1c.title}}</h3></a>
+        {%endfor%}
+    </div>
+    <div>
+    <h2><a href='{%url 'create_room' %}'>Create room</a></h2>
+    <hr>
+    {% for room in rooms %}
+        <span>{{room.host.username}}</span>
+        
+        <h3>{{room.id}}. <a href="{%url 'room'%}{{room.id}}/">{{room.name}}</a></h3>
+        {%if request.user == room.host%}
+        <h5><a href="{%url 'update_room' room.id %}">update room</a></h5>
+        <h5><a href="{%url 'delete_room' room.id %}">delete room</a></h5>
+        {%endif%}
+        <div>{{room.topic.title}}</div>
+        <hr>
+    {% endfor %}
+    </div>
+</div>
+{%endblock%}
