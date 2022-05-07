@@ -7,3 +7,4 @@ def run_multithread():
     for _ in range(2):
         threading.Thread(target=print_current_thread).start()
 run_multithread()
+#hi
