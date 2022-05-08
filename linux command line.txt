@@ -1,0 +1,59 @@
+1.COMMON FILE COMMANLINE
+cat >> destination file : create [if not exist] and write to the end of the file [ctrl+D for exiting]
+
+mv [moving file/path] [target path]: move files or directory to a new location
+
+cp [copy file] [new file]: copy file 
+
+ls -a -l -h 
+
+rm [delete file name]:
+rm -d [delete empty directory] = rmdir
+rm -r [delete recursively directory]:
+
+find [find location] -name/-iname [the file name] -exec [command here] {}+
+find [find location] -type d -name/-iname [the directory]
++number: greater , -number: smaller
+-cmin -ctime -atime -amin -mmin -mtime
+-size
+-perm
+-maxdepth
+
+2. USER AND GROUP [/etc/passwd]
+su [name user]: change user
+adduser [username] 
+deluser [username] 
+passwd [username]  
+addgroup [groupname]
+usermod -a (append) -G (group) [group name] [username]: add user to group
+gpasswd -d username group name: delete someone from the group
+
+3. FILE PERMISSIONS AND CHMOD *r: read/ w: write/ x: execute *
+ls -l : check permission of the file/dir USER - GROUP USER - ALL USER
+chmod [u,a,o,g] [+,-,=] [permission(s)] [filename]
+chmod [u,a,o,g] [+,-,=] [permission(s)] -R [dir]
+
+4. NETWORK
+curl [address]
+ssh-keygen 
+netstat 
+curl -o [file name] -X [POST,DELETE] URL  : write data to [file name]
+
+5. Environment
+.bashrc >> export variable name = information (user only)
+/etc/environment >> export // (global)
+
+6. GREP
+GREP "PARTEN" FILE
+
+7. Shell script
+function () { $variable }
+
+variable = value 
+$variablecall
+
+if [ [condition] ]; then
+fi
+
+read -p "promt here" variable (input from user)
+

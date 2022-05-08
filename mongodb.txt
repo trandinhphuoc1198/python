@@ -1,0 +1,19 @@
+DB.collection.INSERT
+DB.collection.UPDATEone({where},{$set:{}})
+DB.collection.DELETEone({where})
+DB.collection.REPLACEone({where},{})
+DB.collection.FIND({},{}).sort()
+DB.collection.aggregate({$match:{}}(FILTER),
+			{$group:{_id:"$column",total:{$sum:"$column"}},
+			{$sort: {total:1}}
+
+compare: GPA: {$eq,neq,gt,lt,lte,gte: 13}
+{$or: [{column1:"abc"},{column2:""}]}
+column1:{$in: ["abc",12]} (value in column1 that in [])
+check if field exist= GPA: {$exist: true}
+check type= GPA: {$type: 2}
+work with array: GPA : [10,20,1]
+ 	"GPA.0":10
+ 	GPA : {$elementMatch: {$eq:10}}
+	GPA: {$size:4}
+

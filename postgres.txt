@@ -1,0 +1,11 @@
+INSERT INTO table VALUES();
+GROUP BY column HAVING count >5;
+DELETE FROM table;
+UPDATE table SET column=;
+CREATE TABLE;
+DROP TABLE;
+ALTER TABLE table ADD CONSTRAINT constraint name CHECK ()/UNIQUE();
+ALTER TABLE table DROP CONSTRAINT name;
+SELECT * FROM table WHERE column LIKE/iLIKE '%';
+ON CONFLICT (column that constraint) DO NOTHING/UPDATE SET column=EXCLUDED.column;
+ALTER SEQUENCE seq name RESTART WITH actual number;
